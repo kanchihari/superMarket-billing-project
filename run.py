@@ -131,4 +131,14 @@ if buying:
         # Calculate GST (5%) and the final price
         Gst = (total_price * 5) / 100
         # round final-price up to two decimals
-        final_price = round(Gst + total_price, 2)   
+        final_price = round(Gst + total_price, 2)
+          
+        # Print the bill details
+        print("=" * 75)
+        print(" " * 27, "My SuperMarket")
+        print(" " * 30, "Kanchi")
+        print("Name:", name, 30 * " ", "Date:", datetime.now())
+        print(75 * "-")
+        print("S.no:", 6 * " ", "Item", 14 *
+              " ", "Quantity", 14 * " ", "Price")
+        print(75 * "-") 
