@@ -84,4 +84,26 @@ while True:
 
 # Check if the user selected option 1 to view the list of items
 if option == 1:
-    display_item_list()  # Call the function to display the item list        
+    display_item_list()  # Call the function to display the item list
+
+# Initialize 'buying' to False
+buying = False
+
+while True:
+    print("Select an option:")
+    print("1. Buy items")
+    print("2. Exit")
+
+    # Prompt the user for input
+    input_str = input("Enter your choice (1 or 2): \n")
+
+    # Check if the input is an integer
+    if input_str.isdigit():
+        input1 = int(input_str)
+        # Check if the input is either 1 or 2
+        if input1 in [1, 2]:
+            break  # Valid input, break the loop
+        else:
+            print("Invalid input! Please enter a valid option (1 or 2).")
+    else:
+        print("Invalid input! Please enter a valid option (1 or 2).")        
