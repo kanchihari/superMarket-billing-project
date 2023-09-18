@@ -120,4 +120,15 @@ else:
     total_price += price
     itemList.append(item)
     quanList.append(quantity)
-    priceList.append(price)    
+    priceList.append(price)
+
+# Check if the user is in buying mode
+if buying:
+    input2 = input("Do you want to bill the items (yes or no): \n")
+
+    # Check if the user wants to generate a bill
+    if input2.lower() == 'yes':
+        # Calculate GST (5%) and the final price
+        Gst = (total_price * 5) / 100
+        # round final-price up to two decimals
+        final_price = round(Gst + total_price, 2)   
