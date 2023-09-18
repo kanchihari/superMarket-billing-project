@@ -7,6 +7,17 @@ def display_item_list():
     print("Available Items:")
     print(lists)
 
+# Function to get the user's item choice
+
+
+def get_user_item_choice():
+    while True:
+        item = input("Enter the item you want to buy: \n")
+        if item in items:
+            return item
+        else:
+            print("Invalid item! Please enter a valid item.")
+
 
 # Main program 
 print("--------------------- Welcome to SuperMarket ---------------------")
@@ -57,3 +68,7 @@ while True:
         break
     else:
         print("Invalid option! Please enter a valid option .")
+
+# Check if the user selected option 1 to view the list of items
+if option == 1:
+    display_item_list()  # Call the function to display the item list        
