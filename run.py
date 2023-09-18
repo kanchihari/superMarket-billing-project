@@ -19,3 +19,17 @@ lists = '''
 9. Atta - 5.00 €/- per kg
 10. Bread - 3.00 €/- per loaf
 '''
+
+# Dictionary to store item names and their respective prices in euros
+items = {
+    'Apple': 1.50,
+    'Rice': 4.00,
+    'Milk': 2.00,
+    'Oil': 2.39,
+    'Meat': 14.00,
+    'Cola': 1.90,
+    'Wine': 2.50,
+    'Curd': 1.40,
+    'Atta': 5.00,
+    'Bread': 3.00
+}
