@@ -1,32 +1,82 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# SuperMarket Billing System
 
-Welcome,
+This Python script implements a simple SuperMarket Billing System. It allows users to view a list of available items with their prices and make purchases by selecting items and quantities.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## Table of Contents
+- [Code Structure](#code-structure)
+- [Functionality](#functionality)
+- [Flowchart](#flowchart)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Reminders
+## Code Structure
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+The code is organized into several functions and a main program:
 
-## Creating the Heroku app
+1. **`display_item_list()`**: Displays the available items and their prices.
+   
+2. **`get_user_item_choice()`**: Prompts the user to enter the item they want to buy and validates the input.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+3. **`get_user_item_quantity()`**: Prompts the user to enter the quantity of the item they want to buy and validates the input.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+4. **Main Program**:
+   - Prompts the user for their name and displays a welcome message.
+   - Displays the list of available items.
+   - Allows the user to either view the list of items or exit the program.
+   - Handles the user's choice to buy items or exit.
+   - Calculates the total price and generates a bill if the user chooses to buy.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Functionality
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+1. The program begins by prompting the user for their name and displaying a welcome message.
 
-Connect your GitHub repository and deploy as normal.
+2. It then displays the available items and their prices.
 
-## Constraints
+3. The user can choose to view the list of items or exit the program. If they choose to view the list, the program displays the available items.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+4. If the user chooses to buy items, they can select items and quantities. The program calculates the total price and generates a bill.
 
----
+5. The bill includes item-wise details, the total price, GST (5%), and the final price.
 
-Happy coding!
+6. The program ends by thanking the user for visiting the supermarket.
+
+## Flowchart
+
+A flowchart visually represents the flow of the program. Since creating a flowchart in this text format is limited, it's recommended to use a diagramming tool to create an accurate and detailed flowchart.
+
+For creating a flowchart, you can use various tools like draw.io, Lucidchart, or any flowchart tool of your choice. Here's a textual representation to give you an idea:
+
+1. **Start**:
+   - Get user's name.
+
+2. Display welcome message and available items.
+
+3. Prompt user for option:
+   - If option is 1, display item list.
+   - If option is 2, exit and display exit message.
+
+4. If option is 1:
+   - Get user's item choice and quantity.
+   - Calculate price for each item.
+   - Calculate total price.
+
+5. Prompt user to generate bill:
+   - If yes, calculate GST and final price.
+   - Print bill details.
+
+6. Thank the user for visiting the supermarket.
+
+7. **End**.
+
+## Usage
+
+To run the SuperMarket Billing System, execute the Python script. Follow the prompts to interact with the system and make purchases.
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or create a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
