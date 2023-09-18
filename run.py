@@ -132,7 +132,7 @@ if buying:
         Gst = (total_price * 5) / 100
         # round final-price up to two decimals
         final_price = round(Gst + total_price, 2)
-          
+
         # Print the bill details
         print("=" * 75)
         print(" " * 27, "My SuperMarket")
@@ -142,3 +142,16 @@ if buying:
         print("S.no:", 6 * " ", "Item", 14 *
               " ", "Quantity", 14 * " ", "Price")
         print(75 * "-") 
+
+        # Print the bill details for each purchased item
+        for i in range(len(pricelist)):
+            print("{:<12} {:<22} {:<20} {} €/-".format(i +
+                  1, itemList[i], quanList[i], priceList[i]))
+
+        # Print separators and the total price, GST, and final price
+        print(75 * "-")
+        print("Total Price: {:<53}{} €/-".format(' ', total_price))
+        print("GST Tax (5%):{:<52} {} €/-".format(' ', Gst))
+        print(75 * "-")
+        print("Final Price: {:<52}{} €/-".format(' ', final_price))
+        print(75 * "=")
