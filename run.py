@@ -1,5 +1,13 @@
 from datetime import datetime
 
+# Function to display the available items
+
+
+def display_item_list():
+    print("Available Items:")
+    print(lists)
+
+    
 # Main program 
 print("--------------------- Welcome to SuperMarket ---------------------")
 
@@ -33,3 +41,9 @@ items = {
     'Atta': 5.00,
     'Bread': 3.00
 }
+
+total_price = 0
+pricelist = []
+itemList = []
+quanList = []
+priceList = []
