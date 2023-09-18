@@ -32,7 +32,7 @@ def get_user_item_quantity():
             print("Invalid input! Please enter a valid numeric quantity.")
 
 
-# Main program 
+# Main program
 print("--------------------- Welcome to SuperMarket ---------------------")
 
 # Prompt the user for their name
@@ -106,7 +106,7 @@ while True:
         else:
             print("Invalid input! Please enter a valid option (1 or 2).")
     else:
-        print("Invalid input! Please enter a valid option (1 or 2).")    
+        print("Invalid input! Please enter a valid option (1 or 2).")
 
 if input1 == 2:
     print("Thank you for visiting our SuperMarket. Have a great day!")
@@ -141,7 +141,7 @@ if buying:
         print(75 * "-")
         print("S.no:", 6 * " ", "Item", 14 *
               " ", "Quantity", 14 * " ", "Price")
-        print(75 * "-") 
+        print(75 * "-")
 
         # Print the bill details for each purchased item
         for i in range(len(pricelist)):
@@ -155,3 +155,10 @@ if buying:
         print(75 * "-")
         print("Final Price: {:<52}{} €/-".format(' ', final_price))
         print(75 * "=")
+
+        # Thank the user for visiting the supermarket
+        print("{}Thanks for visiting our SuperMarket".format(' ' * 25))
+    else:
+        print("Thank you for visiting our SuperMarket. Have a great day!")
+else:
+    print("Thank you, visit again!\n")
