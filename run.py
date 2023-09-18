@@ -106,4 +106,18 @@ while True:
         else:
             print("Invalid input! Please enter a valid option (1 or 2).")
     else:
-        print("Invalid input! Please enter a valid option (1 or 2).")        
+        print("Invalid input! Please enter a valid option (1 or 2).")    
+
+if input1 == 2:
+    print("Thank you for visiting our SuperMarket. Have a great day!")
+else:
+    buying = True
+    item = get_user_item_choice()
+
+    quantity = get_user_item_quantity()
+    price = quantity * items[item]
+    pricelist.append((item, quantity, items[item], price))
+    total_price += price
+    itemList.append(item)
+    quanList.append(quantity)
+    priceList.append(price)    
