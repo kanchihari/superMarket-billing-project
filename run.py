@@ -7,7 +7,7 @@ def display_item_list():
     print("Available Items:")
     print(lists)
 
-    
+
 # Main program 
 print("--------------------- Welcome to SuperMarket ---------------------")
 
@@ -47,3 +47,13 @@ pricelist = []
 itemList = []
 quanList = []
 priceList = []
+
+while True:
+    option = input("To view the list of items, press 1: \n")
+
+    # Check if the option is valid
+    if option.isdigit() and int(option) in [1]:
+        option = int(option)
+        break
+    else:
+        print("Invalid option! Please enter a valid option .")
