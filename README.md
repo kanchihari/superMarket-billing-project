@@ -1,82 +1,57 @@
 # SuperMarket Billing System
 
-This Python script implements a simple SuperMarket Billing System. It allows users to view a list of available items with their prices and make purchases by selecting items and quantities.
+## Introduction
 
-## Table of Contents
-- [Code Structure](#code-structure)
-- [Functionality](#functionality)
-- [Flowchart](#flowchart)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Code Structure
-
-The code is organized into several functions and a main program:
-
-1. **`display_item_list()`**: Displays the available items and their prices.
-   
-2. **`get_user_item_choice()`**: Prompts the user to enter the item they want to buy and validates the input.
-
-3. **`get_user_item_quantity()`**: Prompts the user to enter the quantity of the item they want to buy and validates the input.
-
-4. **Main Program**:
-   - Prompts the user for their name and displays a welcome message.
-   - Displays the list of available items.
-   - Allows the user to either view the list of items or exit the program.
-   - Handles the user's choice to buy items or exit.
-   - Calculates the total price and generates a bill if the user chooses to buy.
+The **SuperMarket Billing System** is a Python program that simulates a simple supermarket's billing process. It provides users with the ability to view available items, select the items they want to buy, and generate a bill for the selected items.
 
 ## Functionality
 
-1. The program begins by prompting the user for their name and displaying a welcome message.
+### 1. Display Available Items
 
-2. It then displays the available items and their prices.
+The program begins by welcoming the user and displaying a list of available items along with their prices per unit or per kilogram/liter. This allows users to make informed decisions about what they want to purchase.
 
-3. The user can choose to view the list of items or exit the program. If they choose to view the list, the program displays the available items.
+### 2. Item Selection
 
-4. If the user chooses to buy items, they can select items and quantities. The program calculates the total price and generates a bill.
+After viewing the available items, users can choose the items they want to buy by entering the item name. The program validates the input and allows the user to specify the quantity for each item. The user can continue to add more items to their purchase list.
 
-5. The bill includes item-wise details, the total price, GST (5%), and the final price.
+### 3. Bill Generation
 
-6. The program ends by thanking the user for visiting the supermarket.
+Once the user has finished selecting items, the program calculates the total price for the selected items, applies a 5% GST tax, and generates a final bill. The bill displays a detailed breakdown of the purchased items, quantities, prices, total amount, and GST.
 
-## Flowchart
+## User Experience
 
-A flowchart visually represents the flow of the program. Since creating a flowchart in this text format is limited, it's recommended to use a diagramming tool to create an accurate and detailed flowchart.
+Users can easily navigate the program using a simple text-based user interface (UI). They are prompted with clear instructions and options at each step, making the program intuitive to use.
 
-For creating a flowchart, you can use various tools like draw.io, Lucidchart, or any flowchart tool of your choice. Here's a textual representation to give you an idea:
+- **View Available Items:**
+  Users can choose to view the available items and their prices by selecting the appropriate option.
 
-1. **Start**:
-   - Get user's name.
+- **Select Items:**
+  Users can select the items they wish to purchase and specify the quantities for each item. The program validates user input to ensure accuracy.
 
-2. Display welcome message and available items.
+- **Generate Bill:**
+  Users can choose to generate a bill for the selected items. The bill provides a detailed summary of the purchase.
 
-3. Prompt user for option:
-   - If option is 1, display item list.
-   - If option is 2, exit and display exit message.
+## UI/UX Design
 
-4. If option is 1:
-   - Get user's item choice and quantity.
-   - Calculate price for each item.
-   - Calculate total price.
+The UI is designed with a straightforward and menu-driven approach. Users are guided through the process step by step and provided with options at each stage. Clear instructions and prompts help users understand the available actions and make selections with ease.
 
-5. Prompt user to generate bill:
-   - If yes, calculate GST and final price.
-   - Print bill details.
+## Workflow
 
-6. Thank the user for visiting the supermarket.
+1. **Welcome and Display Options:**
+   The program begins with a welcome message and displays the options to view available items or buy items.
 
-7. **End**.
+2. **View Available Items:**
+   If the user chooses to view available items, the program displays a list of items and their prices.
 
-## Usage
+3. **Buy Items:**
+   If the user chooses to buy items, they can enter the items and quantities they want to purchase. The program validates the input and calculates the prices.
 
-To run the SuperMarket Billing System, execute the Python script. Follow the prompts to interact with the system and make purchases.
+4. **Generate Bill:**
+   Once the user is done selecting items, they can choose to generate a bill. The program calculates the total price, applies GST, and displays the final bill.
 
-## Contributing
+5. **Exit:**
+   The user can choose to exit the program at any point.
 
-Contributions are welcome! Feel free to open an issue or create a pull request.
+## Conclusion
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+The **SuperMarket Billing System** provides a practical and user-friendly way to simulate a supermarket billing process. Users can explore available items, select what they want to buy, and experience a seamless and straightforward billing procedure.
