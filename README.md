@@ -1,10 +1,53 @@
 # SuperMarket Billing System
+(Super Market Billing System!)
+
+
+
+**Developer:** [Harish Kanchi]
+
+![Supermarket billing](/assets/images-reademe/responsive-img.png)
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Live Website](#live-website)
+- [Project Goals](#project-goals)
+- [Functionality of Project](#functionality)
+- [User Experience](#user-experience)
+- [Target Audience](#target-audience)
+- [Workflow](#workflow)     
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Conclusion](#Conclusion)
+- [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
 The **SuperMarket Billing System** is a Python program that simulates a simple supermarket's billing process. It provides users with the ability to view available items, select the items they want to buy, and generate a bill for the selected items.
 
-## Functionality
+## Live Website
+
+Visit the live version of the SuperMarket Billing: [SuperMarket-Billing](https://supermarket-bill-c9093ac54dfe.herokuapp.com/)
+
+[Back to top](<#table-of-contents>)
+
+## Project Goals
+
+1. **Functionality and Interface:**
+   Create a Python-based SuperMarket Billing System with functions for item display, user interaction, and bill generation, ensuring a seamless and intuitive user interface.
+
+2. **Data Handling and Calculation:**
+   Implement logic to handle item selection, quantity input, total price calculation, and GST application for generating accurate and detailed bills.
+
+3. **User Experience and Readability:**
+   Prioritize a user-friendly design, error handling, and clear instructions for smooth navigation, enhancing code readability and modularity for future improvements.
+
+4. **Educational Tool and Documentation:**
+   Offer an educational resource for Python learners, showcasing best practices, providing in-code explanations, and serving as a practical example for programming and software understanding.
+
+## Functionality of Project.
 
 ### 1. Display Available Items
 
@@ -17,6 +60,8 @@ After viewing the available items, users can choose the items they want to buy b
 ### 3. Bill Generation
 
 Once the user has finished selecting items, the program calculates the total price for the selected items, applies a 5% GST tax, and generates a final bill. The bill displays a detailed breakdown of the purchased items, quantities, prices, total amount, and GST.
+
+[Back to top](<#table-of-contents>)
 
 ## User Experience
 
@@ -31,9 +76,13 @@ Users can easily navigate the program using a simple text-based user interface (
 - **Generate Bill:**
   Users can choose to generate a bill for the selected items. The bill provides a detailed summary of the purchase.
 
-## UI/UX Design
+## Target Audience
 
-The UI is designed with a straightforward and menu-driven approach. Users are guided through the process step by step and provided with options at each stage. Clear instructions and prompts help users understand the available actions and make selections with ease.
+- Shoppers seeking a streamlined shopping process.
+- Learners exploring Python programming and software basics.
+- Anyone interested in an intuitive supermarket billing example.
+
+[Back to top](<#table-of-contents>)
 
 ## Workflow
 
@@ -51,6 +100,40 @@ The UI is designed with a straightforward and menu-driven approach. Users are gu
 
 5. **Exit:**
    The user can choose to exit the program at any point.
+
+### Technologies Used
+   #### Main Language
+       Python
+
+   #### Frameworks & Libraries
+- [IDLE]  is Python's Integrated Development.
+
+- [Codeanywhere](https://app.codeanywhere.com/) - used as the coding environment.
+
+- [GitHub](https://github.com/) - to store the repository for submission.
+
+- [Heroku](https://id.heroku.com/) - to deploy the live version of the terminal.
+
+- [Techsini](https://techsini.com/multi-mockup/index.php) - used for responsive preview image at the top of the     READMEmd. 
+
+- JavaScript (for interactivity).
+
+#### Deployment
+- Heroku (for hosting)
+
+## Testing
+### Validator Testing
+* [CI PEP8 Online](https://pep8ci.herokuapp.com/). 
+   * No errors were returned.
+![PEP8 CI Validation](/assets/images-readme/pep8ci-heroku.png)
+
+* [Python syntax checker Online](https://extendsclass.com/python-tester.html).
+  *No syntax errors detected
+![](/assets/images-readme/extendsclass.com-python-tester.png)
+
+[Back to top](<#table-of-contents>)
+
+[Back to top](<#table-of-contents>)
 
 ## Conclusion
 
