@@ -57,9 +57,9 @@ items = {
     'Apple': 1.50,
     'Rice': 4.00,
     'Milk': 2.00,
-    'Oil': 2.39,
+    'Oil': 2.50,
     'Meat': 14.00,
-    'Cola': 1.90,
+    'Cola': 1.50,
     'Wine': 2.50,
     'Curd': 1.40,
     'Atta': 5.00,
@@ -102,63 +102,64 @@ while True:
         input1 = int(input_str)
         # Check if the input is either 1 or 2
         if input1 in [1, 2]:
-            break  # Valid input, break the loop
+            if input1 == 2:
+                print("Thank you for visiting our SuperMarket.Visiti Again.")
+                break
+            else:
+                buying = True
+                while buying:
+                    item = get_user_item_choice()
+                    quantity = get_user_item_quantity()
+                    price = quantity * items[item]
+                    pricelist.append((item, quantity, items[item], price))
+                    total_price += price
+                    itemList.append(item)
+                    quanList.append(quantity)
+                    priceList.append(price)
+
+                    input2 = input("Want to buy more items(yes or no): \n")
+                    if input2.lower() == 'no':
+                        buying = False
+
+                input3 = input("Do you want to bill the items (yes or no): \n")
+
+                if input3.lower() == 'yes':
+
+                    # Calculate GST (5%) and the final price
+
+                    Gst = (total_price * 5) / 100
+                    final_price = round(Gst + total_price, 2)
+
+                    # Print the bill details
+                    print("=" * 75)
+                    print(" " * 27, "My SuperMarket")
+                    print(" " * 30, "Kanchi")
+                    print("Name:", name, 30 * " ", "Date:", datetime.now())
+                    print(75 * "-")
+                    print("S.no:", 6 * " ", "Item", 14 *
+                          " ", "Quantity", 14 * " ", "Price")
+                    print(75 * "-")
+
+                    # Print the bill details for each purchased item
+                    for i in range(len(pricelist)):
+                        print("{:<12} {:<22} {:<20} {} €/-".format
+                              (i + 1, itemList[i], quanList[i], priceList[i]))
+
+                    # Print separators and the total price, GST & final price
+                    print(75 * "-")
+                    print("Total Price: {:<53}{} €/-".format(' ', total_price))
+                    print("GST Tax (5%):{:<52} {} €/-".format(' ', Gst))
+                    print(75 * "-")
+                    print("Final Price: {:<52}{} €/-".format(' ', final_price))
+                    print(75 * "=")
+
+                    # Thank the user for visiting the supermarket
+                    print("{}Thanks for visiting Our Store".format(' ' * 25))
+                    break
+                else:
+                    print("Thank you for visiting. Have a great day!")
+                    break
         else:
             print("Invalid input! Please enter a valid option (1 or 2).")
     else:
         print("Invalid input! Please enter a valid option (1 or 2).")
-
-if input1 == 2:
-    print("Thank you for visiting our SuperMarket. Have a great day!")
-else:
-    buying = True
-    item = get_user_item_choice()
-
-    quantity = get_user_item_quantity()
-    price = quantity * items[item]
-    pricelist.append((item, quantity, items[item], price))
-    total_price += price
-    itemList.append(item)
-    quanList.append(quantity)
-    priceList.append(price)
-
-# Check if the user is in buying mode
-if buying:
-    input2 = input("Do you want to bill the items (yes or no): \n")
-
-    # Check if the user wants to generate a bill
-    if input2.lower() == 'yes':
-        # Calculate GST (5%) and the final price
-        Gst = (total_price * 5) / 100
-        # round final-price up to two decimals
-        final_price = round(Gst + total_price, 2)
-
-        # Print the bill details
-        print("=" * 75)
-        print(" " * 27, "My SuperMarket")
-        print(" " * 30, "Kanchi")
-        print("Name:", name, 30 * " ", "Date:", datetime.now())
-        print(75 * "-")
-        print("S.no:", 6 * " ", "Item", 14 *
-              " ", "Quantity", 14 * " ", "Price")
-        print(75 * "-")
-
-        # Print the bill details for each purchased item
-        for i in range(len(pricelist)):
-            print("{:<12} {:<22} {:<20} {} €/-".format(i +
-                  1, itemList[i], quanList[i], priceList[i]))
-
-        # Print separators and the total price, GST, and final price
-        print(75 * "-")
-        print("Total Price: {:<53}{} €/-".format(' ', total_price))
-        print("GST Tax (5%):{:<52} {} €/-".format(' ', Gst))
-        print(75 * "-")
-        print("Final Price: {:<52}{} €/-".format(' ', final_price))
-        print(75 * "=")
-
-        # Thank the user for visiting the supermarket
-        print("{}Thanks for visiting our SuperMarket".format(' ' * 25))
-    else:
-        print("Thank you for visiting our SuperMarket. Have a great day!")
-else:
-    print("Thank you, visit again!\n")
